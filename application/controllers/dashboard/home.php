@@ -1,4 +1,5 @@
 <?php
+
 class Home extends CI_Controller {
 
 //konstruktor class in ci 2.0
@@ -6,9 +7,12 @@ class Home extends CI_Controller {
         parent:: __construct();
     }
 
-        function index() {
-        $this->load->view(template("index"));
+    function index() {
+        
+        $data['content'] = 'dashboard/dashboard';
+        $this->load->view('dashboard/template', $data);
     }
 
 }
+
 ?>

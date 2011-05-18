@@ -9,14 +9,20 @@ class Pretest extends CI_Controller {
     }
 
     function index() {
-       
+        $data['content'] = 'dashboard/pretest';
+        $this->load->view('dashboard/template', $data);
     }
-    function soal(){
-        $data['cheked'];
-        $data['soal_ganda']= $this->soal_model->soalganda_get(); 
-        $this->load->view('dashboard/template',$data);
+
+    function soal() {
+   //     $data['cheked'];
+        
+        //  $data['soal_ganda'] = $this->soal_model->soalganda_get();
+        $data['soal_essay'] =  $this->soal_model->soalessay_get();
+        $data['content'] = 'dashboard/soal_essay';
+        $this->load->view('dashboard/template', $data);
     }
-    function submit(){
+
+    function submit() {
         
     }
 

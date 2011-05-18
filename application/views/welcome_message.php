@@ -42,8 +42,13 @@ code {
 }
 
 </style>
+<script type="text/javascript" src="<?php echo base_url();?>/js/tiny_mce/tiny_mce.js"></script>
 </head>
 <body>
+   <?php $this->load->view('tinymce');?> 
+    <textarea id="elm1" name="elm1" rows="15" cols="80" style="width: 80%">
+	
+	</textarea>
 
 <h1>Welcome to CodeIgniter!</h1>
 
@@ -62,3 +67,36 @@ code {
 
 </body>
 </html>
+<!--        <script type="text/javascript">
+         
+            $(document).ready(function(){
+             
+                $(":radio").change(function(){
+                    var jawaban = $('input:radio:checked').val();
+                    var id =$('input:radio:checked').attr("id");
+                    alert(jawaban+"="+id);
+                });  
+            });
+           
+        </script>
+    </head>
+
+    <body>
+        <ol>
+            <?php foreach ($soal_ganda as $slgd): ?>
+                <li>
+                    <?php echo form_open(''); ?>
+                    <p>
+                        <?php echo $slgd['soal']; ?>
+
+                    </p>
+                    <p>a.  <input type="radio" name="jawabganda" value="a" id="<?php echo $slgd['id'] ?>a" onchange=""/> <?php echo $slgd['a']; ?></p>
+                    <p>b. <input type="radio" name="jawabganda" value="b" id="<?php echo $slgd['id'] ?>b"/><?php echo $slgd['b']; ?></p>
+                    <p>c.  <input type="radio" name="jawabganda" value="c" id="<?php echo $slgd['id'] ?>c"/> <?php echo $slgd['c']; ?></p>
+                    <p>d. <input type="radio" name="jawabganda" value="d" id="<?php echo $slgd['id'] ?>d"/> <?php echo $slgd['d']; ?></p>
+                    </form>
+                </li>
+            <?php endforeach; ?>
+        </ol>
+
+    </body>-->

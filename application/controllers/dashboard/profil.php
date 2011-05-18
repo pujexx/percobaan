@@ -9,6 +9,12 @@ class Profil extends CI_Controller {
         function index() {
         $this->load->view(template("index"));
     }
+    function change_password(){
+        
+    }
+    function change_name(){
+        
+    }
 
 }
 ?>

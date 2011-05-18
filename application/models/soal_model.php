@@ -12,5 +12,14 @@ class Soal_model extends CI_Model{
            return array();
        }
     }
+    function soalessay_get(){
+       $query= $this->db->get('soal_essay');
+       if($query->num_rows() >0){
+           return $query->result_array();
+       }
+       else{
+           return array();
+       } 
+    }
 }
 ?>
